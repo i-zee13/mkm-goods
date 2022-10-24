@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>E-bob</title>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,800" rel="stylesheet">  
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="css/select2-bootstrap4.css">
+<link href="css/datepicker.css" rel="stylesheet">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+
+</head>
+
+  <body id="page-top"> 
+ 
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog   modal-full modal-dialog-centered" role="document">
+		<div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size:30px">×</button>
+      </div>
+		  
+		  <div class="modal-body p-0">
+				
+<div class="container">
+          <div class="row">
+            <div class="col-12">
+             
+             <div class="card">
+  <div class="header">  
+   <div class="row m-0">
+              <div class="col pl-0"><h2 class="_head03 font18 border-0 pb-0"><img class="_T-img-title" src="images/task-icon-b.svg" alt="">Make all pages for web app</h2></div>
+              
+              <div class="col-auto TaskStAction">
+               <div class="row">
+               <div class="col-auto"><strong class="font13 float-left">Status: </strong> <span class="TS-Circle"></span></div>
+                 <div class="col-auto pl-0">                   
+                  <select class="custom-select Sel_Status">
+					  <option selected>In Review </option>
+					  <option>Not Started</option>					 
+					  <option>In Progress</option>
+					  <option>Completed</option>
+					  <option>Cancelled</option>
+					</select> 
+               </div>
+                
+                </div>
+              </div> 
+              
+     
+  
+              </div>
+  </div>
+  <div class="body p-0">
+	<div class="row">
+	<div class="col-7 task-Leftinfo">
+	            <div class="row task-assign-date">
+			 <div class="assigned-to SelectCust">
+                <div class="col-12 p-0 text-gray mb-5">Select Customer:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/cust-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 220px!important">
+                      <option>Customer Name Here 1...</option>
+                      <option>Customer Name Here 2...</option>
+                      <option>Customer Name Here 3...</option>
+                      <option>Customer Name Here 3...</option>   
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              <div class="assigned-to w-auto">
+                <div class="col-12 p-0 text-gray mb-5">Due Date:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon" src="images/calendar-icon002.svg" alt="">
+                  <input class="assignedDate" type="text" value="10/10/2019" id="datepicker2" style="font-size: 13px">
+                </div>
+              </div>
+              <div class="assigned-to w-auto">
+                <div class="col-12 p-0 text-gray mb-5">Time:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/time-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 100px!important">
+                      <option>8:00 AM</option>
+                      <option>8:15 AM</option>
+                      <option>8:30 AM</option>
+                      <option>8:45 AM</option>
+                      <option>9:00 AM</option>
+                      <option>9:15 AM</option>
+                      <option>9:30 AM</option>
+                      <option>9:45 AM</option>
+                      <option>10:00 AM</option>
+                      <option>10:15 AM</option>
+                      <option>10:30 AM</option>
+                      <option>10:45 AM</option>
+                      <option>11:00 AM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="assigned-to w-auto pls-0">
+                <div class="col-12 p-0 text-gray">Priority:</div>
+                 <div class="col-12 p-0">
+				 <div class="flag-iconP"><span class="fa fa-flag"></span> </div>
+                <div class="float-left TaskStAction PriorityFlag"> 
+                
+                	 <select class="custom-select SP_flag">
+					  <option selected>Critical</option>
+					  <option value="1">High</option>					 
+					  <option>Medium</option>
+					  <option>Low</option>
+					</select>
+                
+               <!-- <div class="btn-group">
+                  <button type="button" class="btn _TA-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Review </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button"><span class="fa fa-flag C-Critical"></span> Critical</button>
+                    <hr class="m-0">
+                    <button class="dropdown-item" type="button"><span class="fa fa-flag C-High"></span> High</button>
+                    <hr class="m-0">
+                    <button class="dropdown-item" type="button"><span class="fa fa-flag C-Medium"></span> Medium</button>
+                    <hr class="m-0">
+                    <button class="dropdown-item" type="button"><span class="fa fa-flag C-Low"></span> Low</button>
+                  </div>
+                </div>-->
+                
+              </div> 
+
+                 
+				 </div>
+                         
+                     
+              </div>
+ 
+
+            </div>	
+            
+ 
+            	 <div class="row">
+            	 <div class="col-12 PT-15 PB-15">
+        
+                            <textarea class="taskTextarea">Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they're Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they'reSeems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they're Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they'reSeems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they're Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they'reSeems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they're Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set up a meeting with his team for next week. Seems like they're</textarea>
+                
+               </div>  
+                </div>
+                
+              <div class="row task-assign-date">
+               
+              <div class="assigned-to AssTask">
+                <div class="col-12 p-0 text-gray mb-5">Assigned to:</div>
+                <div class="col-12 pl-0 float-left"> 
+                  <div class="form-s2 date-List EMP__List">
+                    <select class="form-control formselect" multiple="multiple" style="width: 100%">
+                      <option selected>Atif Khan</option>
+                      <option selected>Usam Khan</option>
+                      <option>Sulman Khan</option>
+                      <option>Raheel Khan</option>
+                      <option>Tayyab Khan</option>
+                      <option>Abrar Khan</option>
+                      <option>Utba Khan</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              
+              <div class="assigned-to EmailR">
+                <div class="col-12 p-0 text-gray mb-5">Email Reminder</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon" src="images/calendar-icon002.svg" alt="">
+                  <input class="assignedDate" type="text" value="10/10/2019" id="datepicker2" style="font-size: 13px">
+                </div>
+              </div>
+              
+              <div class="assigned-to ERTime">
+                <div class="col-12 p-0 text-gray mb-5"><br>
+                </div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/time-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 100px!important">
+                      <option>8:00 AM</option>
+                      <option>8:15 AM</option>
+                      <option>8:30 AM</option>
+                      <option>8:45 AM</option>
+                      <option>9:00 AM</option>
+                      <option>9:15 AM</option>
+                      <option>9:30 AM</option>
+                      <option>9:45 AM</option>
+                      <option>10:00 AM</option>
+                      <option>10:15 AM</option>
+                      <option>10:30 AM</option>
+                      <option>10:45 AM</option>
+                      <option>11:00 AM</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+            
+            </div>
+            	
+ 
+	</div>
+	<div class="col-5">
+		<div class="TaskComment">
+			<div class="TaskCommentHD"><h4>Comments</h4> </div>
+			<div class="TaskCommentSec">
+			
+				<div class="FU-history">
+				  <ul class="Act-timeline">
+					<li>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						    <h4>Asif Ali</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					</li>
+					
+					<li>
+					  
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						   <h4>Usama Shahid</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					</li>
+					
+					<li>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						    <h4>Asif Ali</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					</li>
+					
+					<li>
+					  
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						   <h4>Usama Shahid</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					</li>
+					
+					
+					<li>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						    <h4>Asif Ali</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					</li>
+					
+					<li>
+					  
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						   <h4>Usama Shahid</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					</li>
+					
+					<li>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						    <h4>Asif Ali</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					</li>
+					
+					<li>
+					  
+					  <div class="timeline-info">
+						<div class="historyDiv">
+						   <h4>Usama Shahid</h4>
+						  <p>Seems like they're interested in the extra tasty cupcake option. Need to nail down the number of flavors they want. We set </p>
+						  <small>9:46 PM</small>
+						</div>
+					  </div>
+					  <div class="timeline-icon"><img src="images/avatar.svg" alt=""></div>
+					</li>
+		 
+				  </ul>
+				</div>
+
+				
+			</div>      
+			<div class="TaskCommentType">
+			<div class="row">
+			<div class="col pr-0">
+				<textarea rows="2" placeholder="Type Your Comment"></textarea>
+ 			</div>
+			<div class="col-auto pl-0 PT-15"><button class="btn btn-primary mb-0">Send</button></div>
+			</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	</div>
+   </div>
+</div>
+
+             
+             
+             
+             
+               
+            </div>
+          </div>
+        </div>
+		  </div>
+<!--		  <div class="modal-footer"> 
+		  <div class="_Tinfo"><strong>Created by:</strong><br>
+		  <img class="_Tas-img" src="images/avatar.svg" alt="">Saif Ali</div>
+		  <div class="_Tinfo"><strong>Due Date</strong> <br> <span>25/10/2019</span></div>
+		  <div class="_Tinfo"><strong>Time</strong> <br> <span>2:00 PM</span></div>
+		  <div class="_Tinfo"><strong>Status</strong> <br> <span class="Tpending">Pending</span></div>
+			<button type="submit" class="btn btn-cancel" data-dismiss="modal" aria-label="Close">Close</button>
+		  </div>-->
+		</div>
+	  </div>
+	</div>
+   
+  
+<div class="overlay"></div>  
+   
+   
+ <div class="sidebarblue">
+
+<div class="aside-primary">    	
+<div class="sell360"><a href="index.html"><img alt="Sell360" src="images/logo-w.svg"></a></div>
+
+
+
+<div class="main-links">
+
+<ul> 
+	<li><a><img src="images/search-icon.svg" alt=""/> Search</a></li>
+	<li><a id="sidebar-menu"><img src="images/add-pluse-icon.svg" alt=""/> Create New</a></li>
+	<li><a><img src="images/dashboard-icon.svg" alt=""/> Dashboard</a></li>
+	<hr>
+	<li><a><img src="images/emp-icon.svg" alt=""/> Emplyee</a></li>
+	<li><a><img src="images/customer-icon.svg" alt=""/> Customer</a></li>
+	<li><a><img src="images/product-icon.svg" alt=""/> Product</a></li>
+	<li><a><img src="images/shippers-icon.svg" alt=""/> Shippers</a></li>
+	<li><a><img src="images/supplier-icon.svg" alt=""/> Supplier</a></li>
+	<li><a><img src="images/order-icon.svg" alt=""/> Order</a></li>
+	<li><a><img src="images/payment-icon.svg" alt=""/> Payment</a></li>
+	<li><a><img src="images/invoice-icon.svg" alt=""/> Invoices</a></li>
+</ul>
+
+</div>
+    
+<div class="_user-nav">
+	<a href="#"><img src="images/bell-icon-2.svg" alt="Notification" title="Notification"/><span class="badge">4</span></a>
+	<a href="#" class="userIMG"><img src="images/avatar.svg" alt=""/></a>
+	<a href="#" class="float-right"><img src="images/setting-icon.svg" alt="Setting" title="Setting"/></a>	
+</div>
+<div class="sidebar-BL">
+<ul>
+	<li><a href="#"><img src="images/task-icon.svg" alt=""/> Tasks <span class="badge">13</span></a></li>
+	<li><a href="#"><img src="images/activity-icon.svg" alt="Employee"/> Activities <span class="badge">4</span></a></li>
+	<li><a href="#"><img src="images/logout-icon.svg" alt="Employee"/> Logout</a></li>
+</ul>
+</div>
+</div>
+ 
+</div>
+
+<div id="_subNav-id">
+<div class="_subNav"> <a id="SN-close" class="SN-close-btn"><i class="fa fa-arrow-left"></i></a>
+<h2>Creat New</h2>
+<ul>
+<li><a href="#"><img src="images/task-icon.svg" alt=""/>Task</a></li>
+<li><a href="#"><img src="images/order-icon.svg" alt=""/>Order</a></li>
+<li><a href="#"><img src="images/emp-icon.svg" alt=""/>Emplyee</a></li>
+<li><a href="#"><img src="images/customer-icon.svg" alt=""/>Customer</a></li>
+<li><a href="#"><img src="images/product-icon.svg" alt=""/>Product</a></li>
+<li><a href="#"><img src="images/shippers-icon.svg" alt=""/>Shippers</a></li>
+<li><a href="#"><img src="images/supplier-icon.svg" alt=""/>Supplier</a></li>
+<li><a href="#"><img src="images/payment-icon.svg" alt=""/>Payment</a></li>
+<li><a href="#"><img src="images/invoice-icon.svg" alt=""/>Invoices</a></li>
+</ul>
+</div>
+</div>
+
+
+    <div id="wrapper">
+<div id="modalWindow" class="modalWindow h-auto">
+        <div class="_MW-content">
+          <h1 class="modalWindowTitle">Task <a class="modalWindow-act" id="modalClose"><img src="images/close-icon.svg" alt=""/></a> <a class="modalWindow-act" id="modalExpand-btn" href="#"><i class="fa fa-expand"></i></a></h1>
+          <div class="_MW-mid-content">
+            <div class="row task-assign-date border-bP-5">
+			 <div class="assigned-to SelectCust">
+                <div class="col-12 p-0 text-gray mb-5">Select Customer:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/cust-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 230px!important">
+                      <option>Customer Name Here 1...</option>
+                      <option>Customer Name Here 2...</option>
+                      <option>Customer Name Here 3...</option>
+                      <option>Customer Name Here 3...</option>   
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              <div class="assigned-to w-auto">
+                <div class="col-12 p-0 text-gray mb-5">Due Date:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon" src="images/calendar-icon002.svg" alt="">
+                  <input class="assignedDate" type="text" value="10/10/2019" id="datepicker2" style="font-size: 13px">
+                </div>
+              </div>
+              <div class="assigned-to w-auto">
+                <div class="col-12 p-0 text-gray mb-5">Time:</div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/time-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 100px!important">
+                      <option>8:00 AM</option>
+                      <option>8:15 AM</option>
+                      <option>8:30 AM</option>
+                      <option>8:45 AM</option>
+                      <option>9:00 AM</option>
+                      <option>9:15 AM</option>
+                      <option>9:30 AM</option>
+                      <option>9:45 AM</option>
+                      <option>10:00 AM</option>
+                      <option>10:15 AM</option>
+                      <option>10:30 AM</option>
+                      <option>10:45 AM</option>
+                      <option>11:00 AM</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+           
+                        <div class="assigned-to w-auto pls-0">
+                <div class="col-12 p-0 text-gray">Priority:</div>
+                 <div class="col-12 p-0">
+				 <div class="flag-iconP"><span class="fa fa-flag"></span> </div>
+                <div class="float-left TaskStAction PriorityFlag"> 
+                
+                	 <select class="custom-select SP_flag">
+					  <option selected>Critical</option>
+					  <option value="1">High</option>					 
+					  <option>Medium</option>
+					  <option>Low</option>
+					</select>
+ 
+                
+              </div> 
+
+                 
+				 </div>
+                         
+                     
+              </div>
+ 
+
+            </div>
+            <div class="col TaskTitle pl-0">
+              <input type="text" id="" class="form-control" placeholder="Task Title">
+            </div>
+            <textarea class="FW-textareaTask" name="Note" placeholder="Notes..." ></textarea>           
+             
+               <div class="row task-assign-date border-TP-5">
+               
+              <div class="assigned-to AssTask">
+                <div class="col-12 p-0 text-gray mb-5">Assigned to:</div>
+                <div class="col-12 pl-0 float-left"> 
+                  <div class="form-s2 date-List EMP__List">
+                    <select class="form-control formselect" multiple="multiple" style="width: 100%">
+                      <option>Atif Khan</option>
+                      <option>Usam Khan</option>
+                      <option>Sulman Khan</option>
+                      <option>Raheel Khan</option>
+                      <option>Tayyab Khan</option>
+                      <option>Abrar Khan</option>
+                      <option>Utba Khan</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              
+              <div class="assigned-to EmailR">
+                <div class="col-12 p-0 text-gray mb-5"><strong>Email Reminder</strong></div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon" src="images/calendar-icon002.svg" alt="">
+                  <input class="assignedDate" type="text" value="10/10/2019" id="datepicker2" style="font-size: 13px">
+                </div>
+              </div>
+              
+              <div class="assigned-to ERTime">
+                <div class="col-12 p-0 text-gray mb-5"><br>
+                </div>
+                <div class="col-auto l-height p-0"> <img class="calendarIcon float-left" src="images/time-icon.svg" alt="">
+                  <div class="form-s2 date-List">
+                    <select class="form-control formselect" style="width: 100px!important">
+                      <option>8:00 AM</option>
+                      <option>8:15 AM</option>
+                      <option>8:30 AM</option>
+                      <option>8:45 AM</option>
+                      <option>9:00 AM</option>
+                      <option>9:15 AM</option>
+                      <option>9:30 AM</option>
+                      <option>9:45 AM</option>
+                      <option>10:00 AM</option>
+                      <option>10:15 AM</option>
+                      <option>10:30 AM</option>
+                      <option>10:45 AM</option>
+                      <option>11:00 AM</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+            
+            </div>
+          </div>
+          <div class="modalWindow-bottom">
+            <button type="submit" class="btn btn-primary mr-2 float-left">Save Task</button>
+            <!--<div class="float-left">
+              <div class="CC-Select-NT float-left">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="checkDate">
+                  <label class="custom-control-label" for="checkDate">Create a task to follow up</label>
+                </div>
+              </div>
+              <div class="assigned-to _date-FU" id="Date-Show">
+                <div class="l-height p-0"> <img class="calendarIcon" src="images/calendar-icon002.svg" alt="">
+                  <input class="assignedDate" type="text" value="10/10/2019" id="datepicker" style="font-size: 13px">
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </div>
+       
+
+<div id="content-wrapper">
+<div class="overlay-blure"></div>
+       
+ 
+        <div id="blureEffct" class="container">   
+        
+          
+           
+        <div class="row mt-2 mb-3">        
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h2 class="_head01">Task <span>Management</span></h2> 
+				</div>
+				
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<ol class="breadcrumb">
+						<li><a href="#"><span>Task</span></a></li> 
+						<li><span>List</span></li>
+					</ol>
+				</div>
+		</div>
+		
+		<div class="row">
+		<div class="col-md-12">			    	
+			    	<div class="card">
+		    	 	<div class="header">
+		    	 	<a id="modalShow" class="btn add_button"><i class="fa fa-plus"></i> <span>New Task</span></a>		      	
+		    	 	<h2>Task <span> List</span></h2>        
+		    	 	</div>
+		<div class="body">		    	 		
+
+		 <table class="table table-hover dt-responsive nowrap" id="example" style="width:100%">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Task Title</th>
+						<th>Created by</th>
+						<th>Due Date</th>
+						<th>Time</th> 
+						<th>Priority</th>
+						<th>Status</th> 
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+ 	
+				    <tr>
+					    <td>22/10/2019</td>
+						<td>Make all pages for web app</td>
+						<td>Shahid Khan</td>
+						<td>25/10/2019</td>
+						<td>2:00 PM</td>
+						<td><span class="fa fa-flag TaskCritical"></span> Critical</td>	 
+						<td><span class="_TOverdue">Overdue</span></td>
+						<td>
+						<button class="btn btn-default btn-line mb-0" data-toggle="modal" data-target="#exampleModal">View</button>
+						<button class="btn btn-default mb-0">Delete</button>
+						</td>
+					</tr>
+				    <tr>
+					    <td>22/10/2019</td>
+						<td>Make all pages for web app</td>
+						<td>Shahid Khan</td>
+						<td>25/10/2019</td>
+						<td>2:00 PM</td>
+						<td><span class="fa fa-flag TaskHigh"></span> High</td>	 
+						<td><span class="_TOverdue TS-InProgress">In Progress</span></td>
+						<td>
+						<button class="btn btn-default btn-line mb-0" data-toggle="modal" data-target="#exampleModal">View</button>
+						<button class="btn btn-default mb-0">Delete</button>
+						</td>
+					</tr>
+				    <tr>
+					    <td>22/10/2019</td>
+						<td>Make all pages for web app</td>
+						<td>Shahid Khan</td>
+						<td>25/10/2019</td>
+						<td>2:00 PM</td>
+						<td><span class="fa fa-flag TaskMedium"></span> Medium</td>	 
+						<td><span class="_TOverdue TS-InReview">In Review</span></td>
+						<td>
+						<button class="btn btn-default btn-line mb-0" data-toggle="modal" data-target="#exampleModal">View</button>
+						<button class="btn btn-default mb-0">Delete</button>
+						</td>
+					</tr>
+				    <tr>
+					    <td>22/10/2019</td>
+						<td>Make all pages for web app</td>
+						<td>Shahid Khan</td>
+						<td>25/10/2019</td>
+						<td>2:00 PM</td>
+						<td><span class="fa fa-flag TaskLow"></span> Low</td>	 
+						<td><span class="_TOverdue TS-Completed">Completed</span></td>
+						<td>
+						<button class="btn btn-default btn-line mb-0" data-toggle="modal" data-target="#exampleModal">View</button>
+						<button class="btn btn-default mb-0">Delete</button>
+						</td>
+					</tr>
+				    <tr>
+					    <td>22/10/2019</td>
+						<td>Make all pages for web app</td>
+						<td>Shahid Khan</td>
+						<td>25/10/2019</td>
+						<td>2:00 PM</td>
+						<td><span class="fa fa-flag TaskLow"></span> Low</td>	 
+						<td><span class="_TOverdue TS-NotStarted">Not Started</span></td>
+						<td>
+						<button class="btn btn-default btn-line mb-0" data-toggle="modal" data-target="#exampleModal">View</button>
+						<button class="btn btn-default mb-0">Delete</button>
+						</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+				
+		</div>
+					 
+					 
+					
+					</div>
+		
+		</div>
+			
+	 
+        </div>
+         
+ 
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              2019 Sell3sixty All rights reserved
+            </div>
+          </div>
+        </footer>
+
+      </div>
+     
+
+    </div>
+ 
+	  </div>
+
+ 
+<script src="js/jquery-3.3.1.slim.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/datatables.min.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/bootstrap-datepicker.js"></script> 
+<script src="js/jquery.mCustomScrollbar.min.js"></script> 
+
+
+<script src="js/chart.bundle.min.js"></script>
+<script src="js/echarts-en.min.js"></script>
+<script src="js/echarts-liquidfill.min.js"></script>
+<script src="js/dashboard-data.js"></script>
+	 
+
+<script src="js/custom.js"></script> 
+<script>
+	$(document).ready(function() {
+    $('#example').DataTable();
+});
+    $(".formselect").select2();
+$('.form-control').on('focus blur', function (e) {
+  $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+})
+.trigger('blur'); 		
+	
+$('#datepicker, #datepicker2').datepicker({
+       autoclose: true,
+    todayHighlight: true,
+    toggleActive: true,
+}).on('changeDate', function (ev) {
+    $(this).datepicker('hide');
+});
+
+	
+$(document).ready(function () { 			
+			$('#SN-close, .overlay-blure').on('click', function () {
+                $('#_subNav-id').removeClass('active');
+				$('#blureEffct').removeClass('blur-div');
+				$('body').removeClass('no-scroll')
+            });
+            $('#sidebar-menu').on('click', function () {
+                $('#_subNav-id').addClass('active');
+				$('#blureEffct').addClass('blur-div');
+				$('body').addClass('no-scroll')
+            });	
+	
+	
+			$('#modalClose').on('click', function () {
+                $('#modalWindow').removeClass('modalShow');
+            });
+            $('#modalShow').on('click', function () {
+                $('#modalWindow').addClass('modalShow');
+            });	
+	
+	        $('#modalExpand-btn').click(function(){
+			  $("#modalWindow").toggleClass("modalExpand");
+			  $('i').toggleClass('fa-expand fa-compress');
+			});
+			
+			$('#pl-close, .overlay-blure').on('click', function () {
+                $('#product-cl-sec').removeClass('active');
+                $('#blureEffct').removeClass('blur-div');
+				$('body').toggleClass('no-scroll');
+				$('i').toggleClass('fa-arrow-left  fa-arrow-right')			
+            });
+
+            $('#productlist01').on('click', function () {
+                $('#product-cl-sec').addClass('active');
+                $('#blureEffct').addClass('blur-div');
+                $('body').toggleClass('no-scroll');
+				$('i').toggleClass('fa-arrow-left  fa-arrow-right')
+				
+            }); 
+			
+     
+ 
+	
+//$('._RSclose').on('click', function() {
+//	$('.profile-right').toggleClass('_RSopen');		
+//    $('.fa').toggleClass('fa-arrow-left fa-arrow-right');
+//})
+
+
+ $('#accordionExample').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('#accordionExample').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+
+});	
+ 
+               
+$('#checkDate').click(function(){
+   this.checked?$('#Date-Show').show(50):$('#Date-Show').hide(50);
+});
+	
+	
+ 
+//task textarea auto hieght
+/*    jQuery.fn.extend({
+      autoHeight: function () {
+        function autoHeight_(element) {
+          return jQuery(element).css({
+            'height': 'auto',
+            'overflow-y': 'hidden'
+          }).height(element.scrollHeight);
+        }
+        return this.each(function () {
+          autoHeight_(this).on('input', function () {
+            autoHeight_(this);
+          });
+        });
+      }
+    });
+	
+    $('#Tasktextarea').autoHeight();*/	
+    (function($){
+        $(window).on("load",function(){
+            $("._activitycards, .left_Info, .TaskCommentSec").mCustomScrollbar({theme:"dark-2"});
+        });
+    })(jQuery);
+	
+ 	
+</script>
+</body>
+</html>

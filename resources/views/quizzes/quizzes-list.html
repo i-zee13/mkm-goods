@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title></title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="css/select2-bootstrap4.css">
+  <link href="css/datepicker.css" rel="stylesheet">
+  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="css/product.css">
+
+</head>
+
+<body id="page-top">
+ 
+
+  <div class="overlay"></div>
+
+  <div id="sidebarblue" class="sidebarblue">
+    <div class="aside-primary">
+      <div class="sell360"><a href="index.html"><img alt="Sell360" src="images/Sourcecode-Academia-BE.png"></a></div>
+      <a href="#" id="menuClose" class="close-btn-pl"></a>
+      <div class="main-links">
+        <ul>
+          <li><a><img src="images/search-icon.svg" alt="" /> Search</a></li>
+          <li><a id="sidebar-menu"><img src="images/add-pluse-icon.svg" alt="" /> Create New</a></li>
+          <li><a><img src="images/dashboard-icon.svg" alt="" /> Dashboard</a></li>
+          <hr>
+          <li><a><img src="images/emp-icon.svg" alt="" />Organization</a></li>
+          <li><a><img src="images/customer-icon.svg" alt="" /> Customer</a></li>
+          <li><a><img src="images/product-icon.svg" alt="" /> Product</a></li>
+          <li><a><img src="images/shippers-icon.svg" alt="" /> Shippers</a></li>
+          <li><a><img src="images/supplier-icon.svg" alt="" /> Supplier</a></li>
+          <li><a><img src="images/order-icon.svg" alt="" /> Order</a></li>
+          <li><a><img src="images/payment-icon.svg" alt="" /> Payment</a></li>
+          <li><a><img src="images/invoice-icon.svg" alt="" /> Invoices</a></li>
+          <li><a><img src="images/correspondence-icon.svg" alt=""> Correspondence</a></li>
+          <li><a><img src="images/bell-icon-setting.svg" alt=""> Notification</a></li>
+          <li><a><img src="images/profit-and-loss-icon.svg" alt="" /> Profit and Loss</a></li>
+          <li><a><img src="images/reports-icon.svg" alt="" /> Reports</a></li>
+          <li><a><img src="images/forwarder-icon.svg" alt="" /> Forwarder</a></li>
+          <li><a><img src="images/acquisition-source-icon.svg" alt="" /> Acquisition Source</a></li>
+          <li><a><img src="images/setting-left-icon.svg" alt="" /> Settings</a></li>
+        </ul>
+      </div>
+      <div class="_user-nav"> <a href="#"><img src="images/bell-icon-2.svg" alt="Notification"
+            title="Notification" /><span class="badge">4</span></a> <a href="#" class="userIMG"><img
+            src="images/avatar.svg" alt="" /></a> <a href="#" class="float-right"><img src="images/setting-icon.svg"
+            alt="Setting" title="Setting" /></a> </div>
+      <div class="sidebar-BL">
+        <ul>
+          <!--<li><a href="#"><img src="images/task-icon.svg" alt=""/> Tasks <span class="badge">13</span></a></li>-->
+          <li><a href="#"><img src="images/activity-icon.svg" alt="Employee" /> Activities <span
+                class="badge">4</span></a></li>
+          <li><a href="#"><img src="images/logout-icon.svg" alt="Employee" /> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="_subNav-id">
+    <div class="_subNav"> <a id="SN-close" class="SN-close-btn"><i class="fa fa-arrow-left"></i></a>
+      <h2 class="mb-0">Creat New</h2>
+      <ul>
+        <!--<li><a href="#"><img src="images/task-icon.svg" alt=""/>Task</a></li>
+        <li><a href="#"><img src="images/order-icon.svg" alt=""/>Order</a></li>
+        <li><a href="#"><img src="images/emp-icon.svg" alt=""/>Emplyee</a></li>
+        <li><a href="#"><img src="images/customer-icon.svg" alt=""/>Customer</a></li>
+        <li><a href="#"><img src="images/product-icon.svg" alt=""/>Product</a></li>
+        <li><a href="#"><img src="images/shippers-icon.svg" alt=""/>Shippers</a></li>
+        <li><a href="#"><img src="images/supplier-icon.svg" alt=""/>Supplier</a></li>
+        <li><a href="#"><img src="images/payment-icon.svg" alt=""/>Payment</a></li>
+        <li><a href="#"><img src="images/invoice-icon.svg" alt=""/>Invoices</a></li>
+        <li><a href="#"><img src="images/reports-icon.svg" alt=""/>Report</a></li>-->
+        <h2 class="mb-0">Organization</h2>
+        <li><a href="employee-list.html"><img src="images/emp-list-icon.svg" alt="" />Employees</a></li>
+        <li><a href="region-area-territory.html"><img src="images/emp-list-icon.svg"
+              alt="" />Region\Area\Territory\Zone</a></li>
+        <li><a href="#"><img src="images/access-right-icon.svg" alt="" />Access Rights</a></li>
+        <!--<h2 class="mb-0">Product</h2>
+        <li><a href="#"><img src="images/unit-icon.svg" alt=""/>Units</a></li>
+        <li><a href="#"><img src="images/inventory-icon.svg" alt=""/>Variants</a></li>
+        <li><a href="#"><img src="images/m-categories-icon.svg" alt=""/>Main Categories</a></li>
+        <li><a href="#"><img src="images/s-categories-icon.svg" alt=""/>Sub Categories</a></li>
+        <li><a href="#"><img src="images/add-product-icon.svg" alt=""/>Add Product</a></li>
+        <li><a href="#"><img src="images/add-product-list-icon.svg" alt=""/>Product List</a></li>
+        <li><a href="#"><img src="images/gallary-icon.svg" alt=""/>Gallery</a></li>
+        <li><a href="#"><img src="images/bulk-upload-icon.svg" alt=""/>Bulk Upload</a></li>
+        <li><a href="#"><img src="images/brand-products-icon.svg" alt=""/>Brand Products</a></li>
+        <li><a href="#"><img src="images/product-items-icon.svg" alt=""/>Product Items</a></li>
+        <h2 class="mb-0">Customer</h2>
+        <li><a href="#"><img src="images/customer-types-icon.svg" alt=""/>Customer Types</a></li>
+        <li><a href="#"><img src="images/customer-list-icon.svg" alt=""/>Customer List</a></li>
+        <li><a href="#"><img src="images/document-typess.svg" alt=""/>Document Typess</a></li>
+        <li><a href="#"><img src="images/customer-assign-icon.svg" alt=""/>Customer Assignment</a></li>
+        <h2 class="mb-0">Shippers</h2>
+        <li><a href="#"><img src="images/shipping-company-icon.svg" alt=""/>Shipping Company</a></li>
+        <li><a href="#"><img src="images/delivery-ports-icon.svg" alt=""/>Delivery Ports</a></li>
+        <h2 class="mb-0">Supplier</h2>
+        <li><a href="#"><img src="images/supplier-list-icon.svg" alt=""/>Supplier List</a></li>
+        <li><a href="#"><img src="images/supplier-product-assignment-icon.svg" alt=""/>Supplier Product Assignment</a></li>
+        <h2 class="mb-0">Invoice</h2>
+        <li><a href="#"><img src="images/invoice-management-icon.svg" alt=""/>Invoice Management</a></li>
+        <li><a href="#"><img src="images/performa-icon.svg" alt=""/>Performa List</a></li>
+        <h2 class="mb-0">Order</h2>
+        <li><a href="#"><img src="images/order-management-icon.svg" alt=""/>Order Management</a></li>
+        <h2 class="mb-0">Correspondence</h2>
+        <li><a href="#"><img src="images/stages-icon.svg" alt=""/>Stages</a></li>
+        <li><a href="#"><img src="images/mediums-icon.svg" alt=""/>Mediums</a></li>
+        <li><a href="#"><img src="images/correspondence-icon-2.svg" alt=""/>Correspondence</a></li>
+        <h2 class="mb-0">Notifications</h2>
+        <li><a href="#"><img src="images/notifications-p-icon.svg" alt=""/>Notifications</a></li>
+        <h2 class="mb-0">Profit and Loss</h2>
+        <li><a href="#"><img src="images/profit-and-loss-icon-2.svg" alt=""/>Add PNL</a></li>
+        <h2 class="mb-0">Reports</h2>
+        <li><a href="#"><img src="images/reports-icon2.svg" alt=""/>Report</a></li>
+        <h2 class="mb-0">Payment</h2>
+        <li><a href="#"><img src="images/bank-account-icon.svg" alt=""/>Bank Accounts</a></li>
+        <li><a href="#"><img src="images/vendor-icon.svg" alt=""/>Vendor</a></li>-->
+
+      </ul>
+    </div>
+  </div>
+
+  <div id="wrapper">
+
+
+
+    <div id="content-wrapper">
+      <div class="overlay-blure"></div>
+      <div id="blureEffct" class="container">
+
+
+
+        <div class="row mt-1 mb-1">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h2 class="_head01">Quizzes <span>Management</span></h2>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <ol class="breadcrumb">
+              <li><a href="#"><span>Quiz </span></a></li>
+              <li><span>List</span></li>
+            </ol>
+          </div>
+        </div>
+
+
+        <div class="topstats">
+				  <div class="row m-0">
+				  <div class="col pl-0 pr-0">
+					  <div class="gary-box"><strong>Total Quizzes:</strong> <span>354</span></div>
+				  </div>
+				  <div class="col pr-0"><div class="gary-box"><strong>Active Quizzes:</strong> <span>278</span></div></div>
+				  <div class="col pr-0"><div class="gary-box"><strong>Total Students:</strong> <span>2548</span></div></div>			  
+				  <div class="col pr-0"><div class="gary-box"><strong>Total Passed Students:</strong> <span>341</span></div></div>
+	 
+				  </div>
+				</div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="Product-Filter">
+              <div class="row">
+                <div class="col pr-0">
+
+                  <div class="CL-Product"><i class="fa fa-search"></i>
+                    <input type="text" class="search form-control" placeholder="Search">
+                  </div>
+
+                  <div class="CL-Product inputmonth"><i class="fa fa-calendar-alt"></i>
+                    <input type="text" autocomplete="off" class="form-control datepicker2"
+                      placeholder="Start Date">
+                  </div>
+
+                  <div class="CL-Product inputmonth"><i class="fa fa-calendar-alt"></i>
+                    <input type="text" autocomplete="off" class="form-control datepicker2"
+                      placeholder="End Date">
+                  </div>
+
+                  <div class="_cust_filter">
+                    <div class="form-s2">
+                      <select class="form-control formselect" placeholder="Select Filter">
+                          <option>Select Filter</option> 
+                          <option value="have_certificate">Quizzes with Certificate</option>
+                          <option value="students_count_asc">Students - Ascending</option>
+                          <option value="students_count_desc">Students - Descending</option>
+                          <option value="passed_count_asc">Passed Students - Ascending</option>
+                          <option value="passed_count_desc">Passed Students - Descending</option>
+                          <option value="grade_avg_asc">Average Grade - Ascending</option>
+                          <option value="grade_avg_desc">Average Grade - Descending</option>
+                          <option value="created_at_asc">Created Date - Ascending</option>
+                          <option value="created_at_desc">Created Date - Descending</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="_cust_filter">
+                    <div class="form-s2">
+                      <select class="form-control formselect" placeholder="Select Instructor">
+                        <option>Select Instructor</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="_cust_filter">
+                    <div class="form-s2">
+                      <select class="form-control formselect" placeholder="Select Course">
+                        <option>Select Course</option>
+                      </select>
+                    </div>
+                  </div> 
+                </div>
+                <div class="col-auto pl-0">
+                  <button class="btn btn-primary m-0"> Search</button>
+                </div>
+
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="header PT-15 PB-15">
+                <h2>Quiz<span> List</span></h2>
+                <a href="add-quizzes.html" class="btn add_button"><i class="fa fa-plus"></i> <span>New Quiz</span></a>
+              </div>
+              <div class="body">
+                <table class="table table-hover dt-responsive nowrap Quizzes-list" id="example" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Quiz Title</th> 
+                      <th>Time</th>
+                      <th>Questions</th>
+                      <th>No. of Attempts</th>
+                      <th>Pass Mark</th> 
+                      <th>Status</th>                      
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td> 
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle active-st"></i> Active</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr> 
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td>  
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle inactive-st"></i> Inactive</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr>  
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td>  
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle active-st"></i> Active</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr> 
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td>  
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle active-st"></i> Active</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr> 
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td>  
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle inactive-st"></i> Inactive</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr>  
+                    <tr>
+                      <td>Excel from Beginner to Advanced</td>
+                      <td>Midterm Quiz</td>
+                      <td><span class="font-no">20 minute</span></td>
+                      <td><span class="font-no">6</span></td>  
+                      <td><span class="font-no">4</span></td> 
+                      <td><span class="font-no">75</span></td> 
+                      <td><i class="fa fa-circle active-st"></i> Active</td> 
+                      <td>
+                        <button class="btn btn-default btn-line mb-0">Edit</button>
+                        <button class="btn btn-default mb-0">Results</button>
+                        <button class="btn btn-default red-bg mb-0">Delete</button>
+                      </td>
+                    </tr> 
+                  </tbody>
+                </table>
+
+
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              2019 Sell3sixty All rights reserved
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/datatables.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
+
+
+  <script src="js/chart.bundle.min.js"></script>
+  <script src="js/echarts-en.min.js"></script>
+  <script src="js/echarts-liquidfill.min.js"></script>
+  <script src="js/dashboard-data.js"></script>
+
+
+  <script src="js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#example, #example2, #example3, #example4').DataTable();
+    });
+    $(".formselect").select2();
+    $('.form-control').on('focus blur', function (e) {
+      $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length > 0));
+    })
+      .trigger('blur');
+
+    // $('.datepicker2').datepicker({
+    //   autoclose: true,
+    //   minViewMode: 1,
+    //   format: 'dd/mm/yyyy'
+    // }).on('changeDate', function (selected) {
+    //   startDate = new Date(selected.date.valueOf());
+    //   startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+    //   $('.to').datepicker('setStartDate', startDate);
+    // });
+
+
+    $('.datepicker2').datepicker({
+       autoclose: true,
+    todayHighlight: true,
+    toggleActive: true,
+    })
+    .on('changeDate', function (ev) {
+        $(this).datepicker('hide');
+    });
+
+
+    $(document).ready(function () {
+      $('#SN-close, .overlay-blure').on('click', function () {
+        $('#_subNav-id').removeClass('active');
+        $('#blureEffct').removeClass('blur-div');
+        $('body').removeClass('no-scroll')
+      });
+      $('#sidebar-menu').on('click', function () {
+        $('#_subNav-id').addClass('active');
+        $('#blureEffct').addClass('blur-div');
+        $('body').addClass('no-scroll')
+      });
+
+
+      $('#modalClose').on('click', function () {
+        $('#modalWindow').removeClass('modalShow');
+      });
+      $('#modalShow').on('click', function () {
+        $('#modalWindow').addClass('modalShow');
+      });
+
+      $('#modalExpand-btn').click(function () {
+        $("#modalWindow").toggleClass("modalExpand");
+        $('i').toggleClass('fa-expand fa-compress');
+      });
+
+      $('#pl-close, .overlay-blure').on('click', function () {
+        $('#product-cl-sec').removeClass('active');
+        $('#blureEffct').removeClass('blur-div');
+        $('body').toggleClass('no-scroll');
+        $('i').toggleClass('fa-arrow-left  fa-arrow-right')
+      });
+
+      $('#productlist01').on('click', function () {
+        $('#product-cl-sec').addClass('active');
+        $('#blureEffct').addClass('blur-div');
+        $('body').toggleClass('no-scroll');
+        $('i').toggleClass('fa-arrow-left  fa-arrow-right')
+
+      });
+
+
+
+
+      //$('._RSclose').on('click', function() {
+      //	$('.profile-right').toggleClass('_RSopen');		
+      //    $('.fa').toggleClass('fa-arrow-left fa-arrow-right');
+      //})
+
+
+      $('#accordionExample').on('show.bs.collapse', function () {
+        $(this).siblings('.panel-heading').addClass('active');
+      });
+
+      $('#accordionExample').on('hide.bs.collapse', function () {
+        $(this).siblings('.panel-heading').removeClass('active');
+      });
+
+    });
+
+
+    $('#checkDate').click(function () {
+      this.checked ? $('#Date-Show').show(50) : $('#Date-Show').hide(50);
+    });
+
+
+
+    //task textarea auto hieght
+    /*    jQuery.fn.extend({
+          autoHeight: function () {
+            function autoHeight_(element) {
+              return jQuery(element).css({
+                'height': 'auto',
+                'overflow-y': 'hidden'
+              }).height(element.scrollHeight);
+            }
+            return this.each(function () {
+              autoHeight_(this).on('input', function () {
+                autoHeight_(this);
+              });
+            });
+          }
+        });
+    	
+        $('#Tasktextarea').autoHeight();*/
+    (function ($) {
+      $(window).on("load", function () {
+        $("._activitycards, .left_Info, .TaskCommentSec").mCustomScrollbar({ theme: "dark-2" });
+      });
+    })(jQuery);
+
+
+  </script>
+</body>
+
+</html>

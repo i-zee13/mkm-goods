@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/select2-bootstrap4.css">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/dropify.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/dropzone.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/product.css">
+</head>
+
+<body id="page-top">
+    <style>
+        .select-BMS {
+            background-color: #f4f4f4;
+            padding-bottom: 15px;
+            padding-top: 10px
+        }
+        
+        .select-BMS .form-s2 .select2-container .select2-selection--single {
+            border: 1px solid #dddddd;
+            background-color: #ffffff;
+        }
+        
+        .selectBrand {
+            position: relative;
+            padding-right: 33px;
+        }
+        
+        .selectBrand .AddBrand {
+            z-index: 5;
+            top: 0px;
+            right: 0px;
+            height: 35px;
+            width: 33px;
+            padding-top: 7px;
+            box-shadow: none;
+        }
+        
+        .Addpro-form .proTextarea {
+            padding: 8px;
+        }
+        
+        .Addpro-form .dropify-wrapper {
+            height: 80px !important;
+        }
+        
+        .Addpro-form .dropify-wrapper .dropify-message span.file-icon {
+            font-size: 40px !important;
+        }
+        
+        table.dataTable {
+            margin-top: 5px !important;
+        }
+        
+        .itemtable td {
+            padding: 5px;
+        }
+        
+        .items-Details-td {
+            background-color: #f2f2f2;
+            width: auto;
+            padding: 8px;
+            position: relative;
+            font-size: 12px
+        }
+        
+        .add_button {
+            letter-spacing: 1px;
+        }
+        
+        .pt-4 {
+            padding-top: 4px !important;
+        }
+        
+        .items-Details-td .col strong {
+            display: block
+        }
+        
+        .title-row {
+            font-size: 12px;
+            background-color: #f5f8fe;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-bottom: solid 1px #dee2e6;
+            margin: 0;
+        }
+        
+        .detail-row {
+            font-size: 12px;
+            margin: 0;
+            border-bottom: solid 1px #dee2e6;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        
+        .col-sn {
+            flex: 60px;
+            max-width: 60px;
+            padding-left: 10px;
+        }
+        
+        .action-col {
+            flex: 184px;
+            max-width: 184px;
+            padding-left: 0;
+        }
+        
+        .all-col {
+            flex: 110px;
+            max-width: 110px;
+            padding-left: 0;
+        }
+    </style>
+
+    <div id="product-cl-sec">
+        <a href="#" id="pl-close" class="close-btn-pl"></a>
+        <div class="pro-header-text ml-0">New <span> Item</span></div>
+        <div class="pc-cartlist">
+            <div class="overflow-plist">
+                <div class="plist-content">
+                    <div class="_left-filter pt-0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="floating-label" class="card p-20 top_border">
+                                        <h2 class="_head03">Add <span>New Item</span></h2>
+                                        <div class="form-wrap p-0">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label class="font12">Description</label>
+                                                    <div>
+                                                        <textarea name="description" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 pt-10">
+                                                    <h3 class="_head03">Basic <span>Unit</span></h3>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-s2">
+                                                        <label class="font11 mb-0">Unit Type</label>
+                                                        <select class="form-control formselect" placeholder="Select Unit Type">
+                                                            <option>Select Unit Type</option>
+                                                            <option>Unit Type 1</option>
+                                                            <option>Unit Type 2</option>
+                                                            <option>Unit Type 3</option>
+                                                            <option>Unit Type 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pt-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Unit Weight</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 pt-10">
+                                                    <h3 class="_head03">Packaging <span>Option</span></h3>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-s2">
+                                                        <label class="font11 mb-0">Variant Type</label>
+                                                        <select class="form-control formselect" placeholder="Select Variant Type">
+                                                            <option value="0" selected="">Select Variant Type</option>
+                                                            <option value="1">BOX</option>
+                                                            <option value="2">JAR</option>
+                                                            <option value="3">BAG</option>
+                                                            <option value="4">TRAY</option>
+                                                            <option value="5">CHAIN</option>
+                                                            <option value="6">PACKS</option>
+                                                            <option value="7">Pouch</option>
+                                                            <option value="8">Bix</option>
+                                                            <option value="9">Piece</option>
+                                                            <option value="10">Boc</option>
+                                                            <option value="11">Pack</option>
+                                                            <option value="12">Cup</option>
+                                                            <option value="13">Box </option>
+                                                            <option value="14">Inner</option>
+                                                            <option value="15">Tube</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pt-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Unit Quantity</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-s2">
+                                                        <label class="font11 mb-0">Variant Type</label>
+                                                        <select class="form-control formselect" placeholder="Select Variant Type">
+                                                            <option value="0" selected="">Select Variant Type</option>
+                                                            <option value="1">BOX</option>
+                                                            <option value="2">JAR</option>
+                                                            <option value="3">BAG</option>
+                                                            <option value="4">TRAY</option>
+                                                            <option value="5">CHAIN</option>
+                                                            <option value="6">PACKS</option>
+                                                            <option value="7">Pouch</option>
+                                                            <option value="8">Bix</option>
+                                                            <option value="9">Piece</option>
+                                                            <option value="10">Boc</option>
+                                                            <option value="11">Pack</option>
+                                                            <option value="12">Cup</option>
+                                                            <option value="13">Box </option>
+                                                            <option value="14">Inner</option>
+                                                            <option value="15">Tube</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pt-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Variant Quantity</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-s2">
+                                                        <label class="font11 mb-0">Variant Type</label>
+                                                        <select class="form-control formselect" placeholder="Select Variant Type">
+                                                            <option value="0" selected="">Select Variant Type</option>
+                                                            <option value="1">BOX</option>
+                                                            <option value="2">JAR</option>
+                                                            <option value="3">BAG</option>
+                                                            <option value="4">TRAY</option>
+                                                            <option value="5">CHAIN</option>
+                                                            <option value="6">PACKS</option>
+                                                            <option value="7">Pouch</option>
+                                                            <option value="8">Bix</option>
+                                                            <option value="9">Piece</option>
+                                                            <option value="10">Boc</option>
+                                                            <option value="11">Pack</option>
+                                                            <option value="12">Cup</option>
+                                                            <option value="13">Box </option>
+                                                            <option value="14">Inner</option>
+                                                            <option value="15">Tube</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pt-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Variant Quantity</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 pt-10">
+                                                    <h3 class="_head03">Carton <span> Size</span></h3>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Cartan Size</label>
+                                                        <input type="number" name="unit_variant_quantity" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Length</label>
+                                                        <input type="text" name="length" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Width</label>
+                                                        <input type="text" name="width" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Height</label>
+                                                        <input type="text" name="height" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 CBM_val">
+                                                    <label>CBM Value</label>
+                                                    <div class="form-group p-0 m-0 h-auto">
+                                                        <input type="text" name="cbm_value_label" class="form-control" readonly="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 CBM_val">
+                                                    <label>Actual CBM</label>
+                                                    <div class="form-group p-0 m-0 h-auto">
+                                                        <input type="text" name="actual_cbm" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <hr class="mt-10 mb-10">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Standrad Unit Price</label>
+                                                        <input type="number" name="standrad_unit_price" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="_cl-bottom">
+            <button type="submit" class="btn btn-primary mr-2" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
+            <button id="pl-close" type="submit" class="btn btn-cancel mr-2">Cancel</button>
+        </div>
+    </div>
+
+
+    <div id="product-add">
+        <a href="#" id="pl-close2" class="close-btn-pl"></a>
+        <div class="pro-header-text ml-0">New <span>Brand</span></div>
+        <div class="pc-cartlist">
+            <div class="overflow-plist">
+                <div class="plist-content">
+                    <div class="_left-filter pt-0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="floating-label" class="card p-20 top_border">
+                                        <h2 class="_head03">Add <span>New Brand</span></h2>
+                                        <div class="form-wrap p-0">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Brand ID</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label mb-10">Brand Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <label class="font12">Description</label>
+                                                    <div>
+                                                        <textarea name="description" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h2 class="_head03 mt-15">Add <span>Brand Pictures</span></h2>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+
+                                                    <div class="form-wrap p-0">
+                                                        <label class="font12 mb-5">Thumbnail Picture*</label>
+                                                        <div class="upload-pic"></div>
+                                                        <input type="file" id="input-file-now" class="dropify" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 PT-10">
+                                                    <label class="font12 mb-5">Pictures*</label>
+                                                    <form action="#" class="dropzone" id="my-awesome-dropzone">
+                                                        <div class="fallback">
+                                                            <input name="file" type="file" multiple />
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="_cl-bottom">
+            <button type="submit" class="btn btn-primary mr-2" data-toggle="modal" data-target=".bd-example-modal-lg">Add</button>
+            <button id="pl-close2" type="submit" class="btn btn-cancel mr-2">Cancel</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!--Sub Inventroy-->
+
+    <div id="sidebarblue" class="sidebarblue">
+        <div class="aside-primary">
+            <div class="sell360">
+                <a href="index.html"><img alt="Sell360" src="images/logo-w.svg"></a>
+            </div>
+            <a href="#" id="menuClose" class="close-btn-pl"></a>
+            <div class="main-links">
+                <ul>
+                    <li>
+                        <a><img src="images/search-icon.svg" alt="" /> Search</a>
+                    </li>
+                    <li>
+                        <a id="sidebar-menu"><img src="images/add-pluse-icon.svg" alt="" /> Create New</a>
+                    </li>
+                    <li>
+                        <a><img src="images/dashboard-icon.svg" alt="" /> Dashboard</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a><img src="images/emp-icon.svg" alt="" />Organization</a>
+                    </li>
+                    <li>
+                        <a><img src="images/customer-icon.svg" alt="" /> Customer</a>
+                    </li>
+                    <li>
+                        <a><img src="images/product-icon.svg" alt="" /> Product</a>
+                    </li>
+                    <li>
+                        <a><img src="images/shippers-icon.svg" alt="" /> Shippers</a>
+                    </li>
+                    <li>
+                        <a><img src="images/supplier-icon.svg" alt="" /> Supplier</a>
+                    </li>
+                    <li>
+                        <a><img src="images/order-icon.svg" alt="" /> Order</a>
+                    </li>
+                    <li>
+                        <a><img src="images/payment-icon.svg" alt="" /> Payment</a>
+                    </li>
+                    <li>
+                        <a><img src="images/invoice-icon.svg" alt="" /> Invoices</a>
+                    </li>
+                    <li>
+                        <a><img src="images/correspondence-icon.svg" alt=""> Correspondence</a>
+                    </li>
+                    <li>
+                        <a><img src="images/bell-icon-setting.svg" alt=""> Notification</a>
+                    </li>
+                    <li>
+                        <a><img src="images/profit-and-loss-icon.svg" alt="" /> Profit and Loss</a>
+                    </li>
+                    <li>
+                        <a><img src="images/reports-icon.svg" alt="" /> Reports</a>
+                    </li>
+                    <li>
+                        <a><img src="images/forwarder-icon.svg" alt="" /> Forwarder</a>
+                    </li>
+                    <li>
+                        <a><img src="images/acquisition-source-icon.svg" alt="" /> Acquisition Source</a>
+                    </li>
+                    <li>
+                        <a><img src="images/setting-left-icon.svg" alt="" /> Settings</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="_user-nav">
+                <a href="#"><img src="images/bell-icon-2.svg" alt="Notification" title="Notification" /><span class="badge">4</span></a>
+                <a href="#" class="userIMG"><img src="images/avatar.svg" alt="" /></a>
+                <a href="#" class="float-right"><img src="images/setting-icon.svg" alt="Setting" title="Setting" /></a>
+            </div>
+            <div class="sidebar-BL">
+                <ul>
+                    <!--<li><a href="#"><img src="images/task-icon.svg" alt=""/> Tasks <span class="badge">13</span></a></li>-->
+                    <li>
+                        <a href="#"><img src="images/activity-icon.svg" alt="Employee" /> Activities <span class="badge">4</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/logout-icon.svg" alt="Employee" /> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="_subNav-id">
+        <div class="_subNav"> <a id="SN-close" class="SN-close-btn"><i class="fa fa-arrow-left"></i></a>
+            <h2 class="mb-0">Creat New</h2>
+            <ul>
+                <!--<li><a href="#"><img src="images/task-icon.svg" alt=""/>Task</a></li>
+        <li><a href="#"><img src="images/order-icon.svg" alt=""/>Order</a></li>
+        <li><a href="#"><img src="images/emp-icon.svg" alt=""/>Emplyee</a></li>
+        <li><a href="#"><img src="images/customer-icon.svg" alt=""/>Customer</a></li>
+        <li><a href="#"><img src="images/product-icon.svg" alt=""/>Product</a></li>
+        <li><a href="#"><img src="images/shippers-icon.svg" alt=""/>Shippers</a></li>
+        <li><a href="#"><img src="images/supplier-icon.svg" alt=""/>Supplier</a></li>
+        <li><a href="#"><img src="images/payment-icon.svg" alt=""/>Payment</a></li>
+        <li><a href="#"><img src="images/invoice-icon.svg" alt=""/>Invoices</a></li>
+        <li><a href="#"><img src="images/reports-icon.svg" alt=""/>Report</a></li>-->
+                <h2 class="mb-0">Organization</h2>
+                <li>
+                    <a href="employee-list.html"><img src="images/emp-list-icon.svg" alt="" />Employees</a>
+                </li>
+                <li>
+                    <a href="region-area-territory.html"><img src="images/emp-list-icon.svg" alt="" />Region\Area\Territory\Zone</a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/access-right-icon.svg" alt="" />Access Rights</a>
+                </li>
+                <!--<h2 class="mb-0">Product</h2>
+        <li><a href="#"><img src="images/unit-icon.svg" alt=""/>Units</a></li>
+        <li><a href="#"><img src="images/inventory-icon.svg" alt=""/>Variants</a></li>
+        <li><a href="#"><img src="images/m-services-icon.svg" alt=""/>Main Services</a></li>
+        <li><a href="#"><img src="images/s-services-icon.svg" alt=""/>Sub Services</a></li>
+        <li><a href="#"><img src="images/add-product-icon.svg" alt=""/>Add Product</a></li>
+        <li><a href="#"><img src="images/add-product-list-icon.svg" alt=""/>Product List</a></li>
+        <li><a href="#"><img src="images/gallary-icon.svg" alt=""/>Gallery</a></li>
+        <li><a href="#"><img src="images/bulk-upload-icon.svg" alt=""/>Bulk Upload</a></li>
+        <li><a href="#"><img src="images/brand-products-icon.svg" alt=""/>Brand Products</a></li>
+        <li><a href="#"><img src="images/product-items-icon.svg" alt=""/>Product Items</a></li>
+        <h2 class="mb-0">Customer</h2>
+        <li><a href="#"><img src="images/customer-types-icon.svg" alt=""/>Customer Types</a></li>
+        <li><a href="#"><img src="images/customer-list-icon.svg" alt=""/>Customer List</a></li>
+        <li><a href="#"><img src="images/document-typess.svg" alt=""/>Document Typess</a></li>
+        <li><a href="#"><img src="images/customer-assign-icon.svg" alt=""/>Customer Assignment</a></li>
+        <h2 class="mb-0">Shippers</h2>
+        <li><a href="#"><img src="images/shipping-company-icon.svg" alt=""/>Shipping Company</a></li>
+        <li><a href="#"><img src="images/delivery-ports-icon.svg" alt=""/>Delivery Ports</a></li>
+        <h2 class="mb-0">Supplier</h2>
+        <li><a href="#"><img src="images/supplier-list-icon.svg" alt=""/>Supplier List</a></li>
+        <li><a href="#"><img src="images/supplier-product-assignment-icon.svg" alt=""/>Supplier Product Assignment</a></li>
+        <h2 class="mb-0">Invoice</h2>
+        <li><a href="#"><img src="images/invoice-management-icon.svg" alt=""/>Invoice Management</a></li>
+        <li><a href="#"><img src="images/performa-icon.svg" alt=""/>Performa List</a></li>
+        <h2 class="mb-0">Order</h2>
+        <li><a href="#"><img src="images/order-management-icon.svg" alt=""/>Order Management</a></li>
+        <h2 class="mb-0">Correspondence</h2>
+        <li><a href="#"><img src="images/stages-icon.svg" alt=""/>Stages</a></li>
+        <li><a href="#"><img src="images/mediums-icon.svg" alt=""/>Mediums</a></li>
+        <li><a href="#"><img src="images/correspondence-icon-2.svg" alt=""/>Correspondence</a></li>
+        <h2 class="mb-0">Notifications</h2>
+        <li><a href="#"><img src="images/notifications-p-icon.svg" alt=""/>Notifications</a></li>
+        <h2 class="mb-0">Profit and Loss</h2>
+        <li><a href="#"><img src="images/profit-and-loss-icon-2.svg" alt=""/>Add PNL</a></li>
+        <h2 class="mb-0">Reports</h2>
+        <li><a href="#"><img src="images/reports-icon2.svg" alt=""/>Report</a></li>
+        <h2 class="mb-0">Payment</h2>
+        <li><a href="#"><img src="images/bank-account-icon.svg" alt=""/>Bank Accounts</a></li>
+        <li><a href="#"><img src="images/vendor-icon.svg" alt=""/>Vendor</a></li>-->
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div id="content-wrapper">
+            <div class="overlay-blure"></div>
+            <div id="blureEffct" class="container">
+
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <h2 class="_head01">Inventory <span>Management</span></h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <ol class="breadcrumb">
+                            <li><a href="#"><span>Inventory</span></a></li>
+                            <li><span>Add Inventory</span></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header borderB2">
+                                <h2>Add <span> Product</span></h2>
+                            </div>
+                            <div class="body pt-5">
+                                <div class="row select-BMS">
+                                    <div class="col-md-4">
+                                        <div class="form-s2">
+                                            <label class="font12 mb-5">Select Brand</label>
+                                            <div class="selectBrand"><a id="productadd" href="#" class="btn plus_button AddBrand"><i class="fa fa-plus"></i></a>
+                                                <select class="form-control formselect" placeholder="select Brand">
+                                                    <option>Select Brand</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-s2">
+                                            <label class="font12 mb-5">Primary Service</label>
+                                            <select class="form-control formselect" placeholder="select Primary Service">
+                                                <option>Select Primary Service</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-s2">
+                                            <label class="font12 mb-5">Sub Service</label>
+                                            <select class="form-control formselect" placeholder="select Sub Service">
+                                                <option>Select Sub Service</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row Addpro-form">
+                                    <div class="col-md-12 PT-20 PB-10">
+                                        <h3 class="_head03">Product <span> Detail</span></h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-4 col-form-label">Product SKU</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control font15">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-4 col-form-label">Product Name</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pt-10">
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-4 col-form-label">Description</label>
+                                            <div class="col-sm-8">
+                                                <textarea class="proTextarea w-100"> </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 pt-10">
+                                        <div class="form-group row">
+                                            <label for="" class="col-sm-4 col-form-label">Add Picture</label>
+                                            <div class="col-sm-8">
+                                                <div class="form-wrap p-0">
+                                                    <div class="upload-pic"></div>
+                                                    <input type="file" id="input-file-now" class="dropify" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12 PT-20">
+                                        <h3 class="_head03">Item <span> List</span></h3>
+                                        <a id="productlist01" href="#" class="btn add_button"><i class="fa fa-plus"></i>
+                                            <span>Add Item</span></a>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="row title-row">
+                                            <div class="col-3 col-sn"><strong>S.No</strong></div>
+                                            <div class="col"><strong>Name</strong></div>
+                                            <div class="col-3 all-col"><strong>Variant</strong></div>
+                                            <div class="col-3 all-col"><strong>Unit Type</strong></div>
+                                            <div class="col-3 all-col"><strong>Unit Weight</strong></div>
+                                            <div class="col-3 all-col"><strong>CBM</strong></div>
+                                            <div class="col-3 all-col"><strong>Actual CBM</strong></div>
+                                            <div class="col action-col"><strong>Action</strong></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="row detail-row">
+                                            <div class="col-3 col-sn">1</div>
+                                            <div class="col">10gmx24x24</div>
+                                            <div class="col-3 all-col">BAG</div>
+                                            <div class="col-3 all-col">Strip</div>
+                                            <div class="col-3 all-col">3.751</div>
+                                            <div class="col-3 all-col">5</div>
+                                            <div class="col-3 all-col">0</div>
+                                            <div class="col-4 action-col">
+                                                <button class="btn smBTN btn-line mb-0">Edit</button>
+                                                <button class="btn smBTN deleteItem mb-0" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">View Detail</button>
+                                                <button class="btn smBTN deleteItem red-bg mb-0">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 collapse" id="collapseExample" colspan="9">
+                                        <div class="items-Details-td">
+                                            <button type="button" class="close alert_close" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample"> <span aria-hidden="true">×</span>
+                                            </button>
+                                            <strong>Description: </strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            <div class="row PT-10">
+                                                <div class="col"><strong>BAG QTY. </strong> 4</div>
+                                                <div class="col"><strong>JAR QTY. </strong> 3</div>
+                                                <div class="col"><strong>Carton QTY. </strong> 2</div>
+                                                <div class="col"><strong>Standrad Unit Price</strong> 25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="row detail-row">
+                                            <div class="col-3 col-sn">1</div>
+                                            <div class="col">10gmx24x24</div>
+                                            <div class="col-3 all-col">BAG</div>
+                                            <div class="col-3 all-col">Strip</div>
+                                            <div class="col-3 all-col">3.751</div>
+                                            <div class="col-3 all-col">5</div>
+                                            <div class="col-3 all-col">0</div>
+                                            <div class="col-4 action-col">
+                                                <button class="btn smBTN btn-line mb-0">Edit</button>
+                                                <button class="btn smBTN deleteItem mb-0" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">View Detail</button>
+                                                <button class="btn smBTN deleteItem red-bg mb-0">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 collapse" id="collapseExample2" colspan="9">
+                                        <div class="items-Details-td">
+                                            <button type="button" class="close alert_close" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="true" aria-controls="collapseExample2"> <span aria-hidden="true">×</span>
+                                            </button>
+                                            <strong>Description: </strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            <div class="row PT-10">
+                                                <div class="col"><strong>BAG QTY. </strong> 4</div>
+                                                <div class="col"><strong>JAR QTY. </strong> 3</div>
+                                                <div class="col"><strong>Carton QTY. </strong> 2</div>
+                                                <div class="col"><strong>Standrad Unit Price</strong> 25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="row detail-row">
+                                            <div class="col-3 col-sn">1</div>
+                                            <div class="col">10gmx24x24</div>
+                                            <div class="col-3 all-col">BAG</div>
+                                            <div class="col-3 all-col">Strip</div>
+                                            <div class="col-3 all-col">3.751</div>
+                                            <div class="col-3 all-col">5</div>
+                                            <div class="col-3 all-col">0</div>
+                                            <div class="col-4 action-col">
+                                                <button class="btn smBTN btn-line mb-0">Edit</button>
+                                                <button class="btn smBTN deleteItem mb-0" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">View Detail</button>
+                                                <button class="btn smBTN deleteItem red-bg mb-0">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 collapse" id="collapseExample3" colspan="9">
+                                        <div class="items-Details-td">
+                                            <button type="button" class="close alert_close" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="true" aria-controls="collapseExample3"> <span aria-hidden="true">×</span>
+                                            </button>
+                                            <strong>Description: </strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            <div class="row PT-10">
+                                                <div class="col"><strong>BAG QTY. </strong> 4</div>
+                                                <div class="col"><strong>JAR QTY. </strong> 3</div>
+                                                <div class="col"><strong>Carton QTY. </strong> 2</div>
+                                                <div class="col"><strong>Standrad Unit Price</strong> 25</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <footer class="sticky-footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto"> 2019 Sell3sixty All rights reserved </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/datatables.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/dropify.min.js"></script>
+    <script src="js/form-file-upload-data.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/dropzone-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(".formselect").select2();
+
+
+        $('.sd-type').select2({
+            createTag: function(params) {
+                var term = $.trim(params.term);
+
+                if (term === '') {
+                    return null;
+                }
+
+                return {
+                    id: term,
+                    text: term,
+                    newTag: true // add additional parameters
+                }
+            }
+        });
+
+
+        $(document).ready(function() {
+            $('#example, #example2, #example3, #example4').DataTable();
+        });
+        $(".formselect").select2();
+        $('.form-control').on('focus blur', function(e) {
+                $(this).parents('.form-group').toggleClass('focused', (e.type === 'focus' || this.value.length >
+                    0));
+            })
+            .trigger('blur');
+
+        $('#datepicker, #datepicker2').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            toggleActive: true,
+        }).on('changeDate', function(ev) {
+            $(this).datepicker('hide');
+        });
+
+
+        $(document).ready(function() {
+            $('#SN-close, .overlay-blure').on('click', function() {
+                $('#_subNav-id').removeClass('active');
+                $('#blureEffct').removeClass('blur-div');
+                $('body').removeClass('no-scroll')
+            });
+            $('#sidebar-menu').on('click', function() {
+                $('#_subNav-id').addClass('active');
+                $('#blureEffct').addClass('blur-div');
+                $('body').addClass('no-scroll')
+            });
+
+
+            $('#modalClose').on('click', function() {
+                $('#modalWindow').removeClass('modalShow');
+            });
+            $('#modalShow').on('click', function() {
+                $('#modalWindow').addClass('modalShow');
+            });
+
+            $('#modalExpand-btn').click(function() {
+                $("#modalWindow").toggleClass("modalExpand");
+                $('i').toggleClass('fa-expand fa-compress');
+            });
+
+            $('#pl-close, .overlay-blure').on('click', function() {
+                $('#product-cl-sec').removeClass('active');
+                $('#blureEffct').removeClass('blur-div');
+                $('body').toggleClass('no-scroll');
+                $('i').toggleClass('fa-arrow-left  fa-arrow-right')
+            });
+
+            $('#productlist01').on('click', function() {
+                $('#product-cl-sec').addClass('active');
+                $('#blureEffct').addClass('blur-div');
+                $('body').toggleClass('no-scroll');
+                $('i').toggleClass('fa-arrow-left  fa-arrow-right')
+
+            });
+
+            $('#pl-close2, .overlay-blure').on('click', function() {
+                $('#product-add').removeClass('active');
+                $('#blureEffct').removeClass('blur-div');
+                $('body').toggleClass('no-scroll');
+            });
+
+            $('#productadd').on('click', function() {
+                $('#product-add').addClass('active');
+                $('#blureEffct').addClass('blur-div');
+                $('body').toggleClass('no-scroll');
+
+            });
+
+
+            $('#accordionExample').on('show.bs.collapse', function() {
+                $(this).siblings('.panel-heading').addClass('active');
+            });
+
+            $('#accordionExample').on('hide.bs.collapse', function() {
+                $(this).siblings('.panel-heading').removeClass('active');
+            });
+
+        });
+
+
+        $('#checkDate').click(function() {
+            this.checked ? $('#Date-Show').show(50) : $('#Date-Show').hide(50);
+        });
+    </script>
+</body>
+
+</html>
